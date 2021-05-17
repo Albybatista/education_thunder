@@ -1,6 +1,7 @@
 import './App.css';
 import MainPage from './components/MainPage/MainPage';
 import IntroPage from './components/IntroPage/IntroPage'
+import CategoryPage from './components/CategoryPage/CategoryPage'
 import { BrowserRouter as Router, Route, Switch} from 'react-router-dom'
 
 const routes = [
@@ -8,6 +9,11 @@ const routes = [
     Component: MainPage,
     key: 'MainPage',
     path: '/main'
+  },
+  {
+    Component: CategoryPage,
+    key: 'CategoryPage',
+    path: '/category'
   },
   {
     Component: IntroPage,
