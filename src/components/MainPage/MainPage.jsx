@@ -4,6 +4,7 @@ import axios from 'axios';
 
 const MainPage = () => {
   const [data, setData] = useState([]);
+  
 
   useEffect(() => {
     ( async() => {
