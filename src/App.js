@@ -5,6 +5,7 @@ import IntroPage from './components/IntroPage/IntroPage'
 import CategoryPage from './components/CategoryPage/CategoryPage'
 import { BrowserRouter as Router, Route, Switch} from 'react-router-dom'
 import TheContext from './context/index';
+import CreateQuiz from './components/CreateQuiz/CreateQuiz';
 
 
 const routes = [
@@ -17,6 +18,11 @@ const routes = [
     Component: CategoryPage,
     key: 'CategoryPage',
     path: '/category'
+  },
+  {
+    Component: CreateQuiz,
+    key: 'CreateQuiz',
+    path: '/create'
   },
   {
     Component: IntroPage,
