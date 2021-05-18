@@ -1,8 +1,10 @@
-import React, {useState} from 'react'
+import React, {useState, useContext} from 'react'
 // import styles from '../CategoryPage/Category.module.css'
+import TheContext from '../../context/index'
 
 export default function CategoryPage() {
-    const [choice, setChoice] = useState()
+
+    const context = useContext(TheContext)
 
 
     const buttons = [
@@ -34,7 +36,8 @@ export default function CategoryPage() {
     ]
 
     const handleClick = (event) => {
-        setChoice(event.target.value)
+        context.setCategoryNum(event.target.value)
+        // window.location.href = '/main'
     }
 
 

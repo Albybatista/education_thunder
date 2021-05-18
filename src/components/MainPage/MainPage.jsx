@@ -17,9 +17,10 @@ const MainPage = () => {
   useEffect(() => {
     ( async() => {
       try {
-        const response = await axios.get(`https://opentdb.com/api.php?amount=50&category=22&difficulty=easy&type=multiple`);
+        const response = await axios.get(`https://opentdb.com/api.php?amount=13&category=27&difficulty=easy&type=multiple`);
         setData(response.data.results);
-        setRandomQuestion(response.data.results[Math.floor(Math.random() * response.data.results.length)])
+        console.log(response)
+        await setRandomQuestion(response.data.results[Math.floor(Math.random() * response.data.results.length)])
       } catch (err) {
         console.error(err)
       }
